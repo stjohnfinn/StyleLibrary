@@ -1,0 +1,177 @@
+@font-face {
+  font-family: Terminal;
+  src: url("./fonts/clacon2.ttf");
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  background-color: #a1a1a1;
+  color: #575757;
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div {
+  height: 20vh;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#btn-div-1 > button {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-family: "Inter";
+  font-weight: bold;
+  border: 1px black solid;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.2s all;
+}
+#btn-div-1 > button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#btn-div-1 > button:active {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0s all;
+}
+
+h1 {
+  margin: 0;
+  color: #1b1b1b;
+  font-family: "IBM Plex Sans";
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+hr {
+  height: 0.5px;
+  width: 40vw;
+  background-color: black;
+  border: none;
+}
+
+#input-div-1 {
+  justify-content: center;
+  z-index: 0;
+  position: relative;
+  width: 20rem;
+}
+#input-div-1 input[type=text] {
+  position: absolute;
+  background: transparent;
+  border: 1px solid black;
+  z-index: 1;
+  font-family: #575757;
+  font-size: 2rem;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+#input-div-1 input[type=text]:focus {
+  outline: none;
+}
+#input-div-1 p {
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  color: #282883;
+  font-size: 2rem;
+  padding: 0.25rem;
+  transition: 0.2s all;
+  z-index: -1;
+}
+#input-div-1:focus-within p {
+  transform: translateY(-50%) scale(0.5);
+  transform-origin: top left;
+}
+#input-div-1:focus-within input[type=text] {
+  opacity: 1;
+}
+
+#btn-div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4d0c7;
+}
+#btn-div-2 button {
+  font-family: Terminal;
+  width: 6rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  border-left: #f2eee5 2px solid;
+  border-top: #f2eee5 2px solid;
+  background-color: #d4d0c7;
+  border-bottom: #524e45 2px solid;
+  border-right: #524e45 2px solid;
+}
+#btn-div-2 button:active {
+  border-bottom: #f2eee5 2px solid;
+  border-right: #f2eee5 2px solid;
+  border-left: #524e45 2px solid;
+  border-top: #524e45 2px solid;
+}
+#btn-div-2 button span {
+  text-decoration: underline;
+}
+
+#btn-div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#btn-div-3 div {
+  width: 8rem;
+  height: 3rem;
+  position: relative;
+}
+#btn-div-3 div .button-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+#btn-div-3 div button {
+  box-sizing: border-box;
+  background-color: black;
+  border: 1px solid black;
+  font-family: "Inter";
+  font-size: 1rem;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  transform: translate(-4px, -4px);
+  transition: 0.2s all;
+}
+#btn-div-3 div button:hover {
+  transform: translate(-2px, -2px);
+}
+#btn-div-3 div button:active {
+  transform: translate(0px, 0px);
+}
+
+#crosshairs-div {
+  background: black;
+  height: min-content;
+  width: min-content;
+}
+
+/*# sourceMappingURL=style.css.map */
