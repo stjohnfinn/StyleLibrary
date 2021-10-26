@@ -28,6 +28,7 @@ body {
   align-items: center;
 
   div {
+    margin: 0;
     height: 20vh;
     width: 60%;
     display: flex;
@@ -70,6 +71,7 @@ h1 {
 }
 
 hr {
+  margin: 0;
   height: 0.5px;
   width: 40vw;
   background-color: black;
@@ -129,7 +131,6 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #d4d0c7;
 
   button {
     font-family: Terminal;
@@ -192,6 +193,7 @@ hr {
 
       &:hover {
         transform: translate(-2px, -2px);
+        color: #777;
       }
 
       &:active {
@@ -205,4 +207,89 @@ hr {
   background: black;
   height: min-content;
   width: min-content;
+}
+
+#btn-div-4 {
+  div {
+    height: 35px;
+    width: 37px;
+    cursor: pointer;
+    border: 1px solid black;
+
+    &:hover > #three-bar-menu {
+      width: 0;
+      
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  #three-bar-menu {
+    height: 2px; 
+    width: 26px;
+    background-color: black;
+    position: relative;
+    border: none;
+    border-radius: 1px;
+    transition: 0.2s all;
+
+    &::after {
+      height: 2px;
+      width: 26px;
+      content: '';
+      display: block;
+      background: black;
+      transform: translateY(10px);
+      position: absolute;
+      border-radius: 1px;
+      transition: 0.2s all;
+    }
+
+    &::before {
+      height: 2px;
+      width: 26px;
+      content: '';
+      display: block;
+      background: black;
+      transform: translateY(-10px);
+      position: absolute;
+      border-radius: 1px;
+      transition: 0.2s all;
+    }
+  }
+
+  #up-and-down {
+    border: none;
+    position: relative;
+    transition: 0.2s all;
+
+    &::after {
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+      background-color: black;
+      content: '';
+      position: absolute;
+      transform: translateX(-7px) rotate(45deg);
+    }
+
+    &::before {
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+      background-color: black;
+      content: '';
+      position: absolute;
+      transform: translateX(7px) rotate(-45deg);
+    }
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
 }

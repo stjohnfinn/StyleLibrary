@@ -16,6 +16,7 @@ body {
   align-items: center;
 }
 body div {
+  margin: 0;
   height: 20vh;
   width: 60%;
   display: flex;
@@ -55,6 +56,7 @@ h1 {
 }
 
 hr {
+  margin: 0;
   height: 0.5px;
   width: 40vw;
   background-color: black;
@@ -105,7 +107,6 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #d4d0c7;
 }
 #btn-div-2 button {
   font-family: Terminal;
@@ -163,6 +164,7 @@ hr {
 }
 #btn-div-3 div button:hover {
   transform: translate(-2px, -2px);
+  color: #777;
 }
 #btn-div-3 div button:active {
   transform: translate(0px, 0px);
@@ -172,6 +174,79 @@ hr {
   background: black;
   height: min-content;
   width: min-content;
+}
+
+#btn-div-4 div {
+  height: 35px;
+  width: 37px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+#btn-div-4 div:hover > #three-bar-menu {
+  width: 0;
+}
+#btn-div-4 div:hover > #three-bar-menu::after {
+  transform: rotate(45deg);
+}
+#btn-div-4 div:hover > #three-bar-menu::before {
+  transform: rotate(-45deg);
+}
+#btn-div-4 #three-bar-menu {
+  height: 2px;
+  width: 26px;
+  background-color: black;
+  position: relative;
+  border: none;
+  border-radius: 1px;
+  transition: 0.2s all;
+}
+#btn-div-4 #three-bar-menu::after {
+  height: 2px;
+  width: 26px;
+  content: "";
+  display: block;
+  background: black;
+  transform: translateY(10px);
+  position: absolute;
+  border-radius: 1px;
+  transition: 0.2s all;
+}
+#btn-div-4 #three-bar-menu::before {
+  height: 2px;
+  width: 26px;
+  content: "";
+  display: block;
+  background: black;
+  transform: translateY(-10px);
+  position: absolute;
+  border-radius: 1px;
+  transition: 0.2s all;
+}
+#btn-div-4 #up-and-down {
+  border: none;
+  position: relative;
+  transition: 0.2s all;
+}
+#btn-div-4 #up-and-down::after {
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  transform: translateX(-7px) rotate(45deg);
+}
+#btn-div-4 #up-and-down::before {
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  transform: translateX(7px) rotate(-45deg);
+}
+#btn-div-4 #up-and-down:hover {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */
