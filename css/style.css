@@ -249,4 +249,64 @@ hr {
   transform: rotate(180deg);
 }
 
+#btn-div-5 button {
+  background: none;
+  border: none;
+  font-family: "Inter";
+  font-size: 2rem;
+  position: relative;
+}
+#btn-div-5 button:focus {
+  outline: none;
+}
+#btn-div-5 button::after {
+  height: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  background: black;
+  transition: 0.2s all ease-out;
+}
+#btn-div-5 button:hover::after {
+  width: 100%;
+}
+
+#btn-div-6 div {
+  height: min-content;
+  width: min-content;
+}
+#btn-div-6 div div {
+  height: 2.5rem;
+  width: 8rem;
+  position: absolute;
+  border: 1px black solid;
+  transition: 0.2s all;
+  opacity: 1;
+  transform: scale(1);
+  border-radius: 5px;
+}
+#btn-div-6 div:hover div {
+  transform: scale(125%);
+  opacity: 0;
+}
+#btn-div-6 div:hover button {
+  transform: scale(110%);
+}
+#btn-div-6 div button {
+  position: absolute;
+  height: 2.5rem;
+  width: 8rem;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  z-index: 0;
+  border-radius: 5px;
+  background: none;
+  transition: 0.2s all;
+}
+
 /*# sourceMappingURL=style.css.map */
