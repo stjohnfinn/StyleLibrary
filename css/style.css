@@ -309,4 +309,101 @@ hr {
   transition: 0.2s all;
 }
 
+#btn-div-7 > div {
+  height: 100px;
+  width: 100px;
+  overflow: visible;
+}
+#btn-div-7 > div > div {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+}
+#btn-div-7 > div p {
+  color: black;
+  background-color: #a1a1a1;
+  box-sizing: border-box;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Inter";
+  font-size: 2.2rem;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.2s all;
+  border-radius: 50%;
+}
+#btn-div-7 > div p:hover {
+  transform: translate(-5px, -5px);
+}
+
+#card-div-1 {
+  height: 20rem;
+}
+#card-div-1 > div {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.363));
+}
+#card-div-1 > div > div {
+  width: 500px;
+  background-color: rgba(187, 49, 49, 0.658);
+  background-size: cover;
+  height: 200px;
+  transition: clip-path 0.2s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+  box-shadow: 0px 0px 10px black;
+}
+#card-div-1 > div > div:hover {
+  clip-path: polygon(80px 20px, 440px 20px, 440px 160px, 400px 95%, 40px 95%, 40px 50px);
+}
+#card-div-1 > div > div:hover div {
+  transform: scale(0.9);
+}
+#card-div-1 > div > div > div {
+  font-family: "Inter";
+  transition: 0.2s all;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#card-div-1 > div > div > div h1 {
+  margin: 0;
+  color: #bebebe;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s all;
+}
+#card-div-1 > div > div > div p {
+  margin: 0;
+  color: #bebebe;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s all;
+}
+
+#btn-div-8 button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-family: "Inter";
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s all;
+  transform-origin: left;
+}
+#btn-div-8 button:hover {
+  transform: translateY(-5px);
+  border-bottom-color: #eb9800;
+  background-color: whitesmoke;
+}
+#btn-div-8 button:active {
+  transform: translateY(4px);
+}
+
 /*# sourceMappingURL=style.css.map */
