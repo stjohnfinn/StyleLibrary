@@ -8,7 +8,7 @@ button {
 
 body {
   margin: 0;
-  background-color: #a1a1a1;
+  background-color: #dddddd;
   color: #575757;
   font-family: "Inter";
   display: flex;
@@ -323,7 +323,7 @@ hr {
 }
 #btn-div-7 > div p {
   color: black;
-  background-color: #a1a1a1;
+  background-color: #dddddd;
   box-sizing: border-box;
   border: 2px solid black;
   height: 50px;
@@ -360,7 +360,7 @@ hr {
   clip-path: polygon(80px 20px, 440px 20px, 440px 160px, 400px 95%, 40px 95%, 40px 50px);
 }
 #card-div-1 > div > div:hover div {
-  transform: scale(0.9);
+  transform: scale(0.75);
 }
 #card-div-1 > div > div > div {
   font-family: "Inter";
@@ -404,6 +404,175 @@ hr {
 }
 #btn-div-8 button:active {
   transform: translateY(4px);
+}
+
+#card-div-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: unset;
+  width: 70%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+#card-div-2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid black;
+  height: 10rem;
+  width: 20rem;
+  margin: 1rem;
+  background-color: #dadada;
+  transition: 0.1s all;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 0px black;
+}
+#card-div-2 div h1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#card-div-2 div p {
+  color: #1b1b1b;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+#card-div-2 div hr {
+  height: 2px;
+  background-color: yellow;
+  border-right: 5px solid black;
+  width: 25%;
+  margin-left: 1rem;
+  transition: 0.3s all;
+}
+#card-div-2 div:hover {
+  transform: translate(0px, -5px);
+}
+#card-div-2 div:hover hr {
+  width: 50%;
+}
+
+#card-div-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: unset;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+#card-div-3 div {
+  height: unset;
+  width: unset;
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  border-left: 4px solid black;
+  transition: 0.2s all;
+  background-image: linear-gradient(-25deg, #d4ffd4, #93f793);
+  margin: 1rem;
+}
+#card-div-3 div h1 {
+  text-align: right;
+  width: 100%;
+  padding-right: 1rem;
+  height: unset;
+  font-size: 3rem;
+  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: black;
+}
+#card-div-3 div h1::selection {
+  background: none;
+}
+#card-div-3 div p {
+  text-align: right;
+  width: 100%;
+  padding-right: 1rem;
+  height: unset;
+  font-size: 0.75rem;
+  margin: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  transition: 0.2s all;
+}
+#card-div-3 div p:hover {
+  text-decoration: underline;
+  cursor: url("../images/arrow-right.png"), auto;
+}
+#card-div-3 div p::selection {
+  background: none;
+}
+
+#card-div-4 {
+  height: unset;
+  width: 70%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#card-div-4 #card-4-1 {
+  background-color: yellow;
+  border-left: 2px black dashed;
+  transform: rotate3d(-1, 7, -5, 80deg);
+}
+#card-div-4 #card-4-1:hover {
+  transform: rotate3d(0, 0, 0, 0);
+}
+#card-div-4 #card-4-2 {
+  background-color: green;
+  border-bottom: 2px black dashed;
+  transform: rotate3d(5, -6, 2, 50deg);
+}
+#card-div-4 #card-4-2:hover {
+  transform: rotate3d(0, 0, 0, 0);
+}
+#card-div-4 #card-4-3 {
+  background-color: blue;
+  border-left: 2px black dashed;
+  transform: rotate3d(12, 1, -7, 80deg);
+}
+#card-div-4 #card-4-3 h1 {
+  color: white;
+}
+#card-div-4 #card-4-3:hover {
+  transform: rotate3d(0, 0, 0, 0);
+}
+#card-div-4 #card-4-4 {
+  background-color: red;
+  border-top: 2px black dashed;
+  transform: rotate3d(10, -7, 2, 65deg);
+}
+#card-div-4 #card-4-4 h1 {
+  color: white;
+}
+#card-div-4 #card-4-4:hover {
+  transform: rotate3d(0, 0, 0, 0);
+}
+#card-div-4 div {
+  cursor: url("../images/sphere.png"), auto;
+  margin: 0.25rem;
+  height: 10rem;
+  transition: 0.2s all ease-in;
+}
+#card-div-4 div h1 {
+  background: none;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

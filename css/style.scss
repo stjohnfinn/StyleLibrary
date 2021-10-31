@@ -1,5 +1,5 @@
 $secondary-text: #1b1b1b;
-$background: #a1a1a1;
+$background: #dddddd;
 $background-2: #797979;
 $primary-text: #575757;
 $secondary-bg: #2c061f;
@@ -424,7 +424,7 @@ hr {
         clip-path: polygon(80px 20px, 440px 20px, 440px 160px, 400px 95%, 40px 95%, 40px 50px);
 
         div {
-          transform: scale(0.9);
+          transform: scale(0.75);
         }
       }
   
@@ -479,6 +479,199 @@ hr {
 
     &:active {
       transform: translateY(4px);
+    }
+  }
+}
+
+#card-div-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: unset;
+  width: 70%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid black;
+    height: 10rem;
+    width: 20rem;
+    margin: 1rem;
+    background-color: rgb(218, 218, 218);
+    transition: 0.1s all;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px black;
+
+    h1 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $secondary-text;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    hr {
+      height: 2px;
+      background-color: rgb(255, 255, 0);
+      border-right: 5px solid black;
+      width: 25%;
+      margin-left: 1rem;
+      transition: 0.3s all;
+    }
+
+    &:hover {
+      transform: translate(0px, -5px);
+
+      hr {
+        width: 50%;
+      }
+    }
+  }
+}
+
+#card-div-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: unset;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  div {
+    height: unset;
+    width: unset;
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    border-left: 4px solid black;
+    transition: 0.2s all;
+    background-image: linear-gradient(-25deg,rgb(212, 255, 212), rgb(147, 247, 147));
+    margin: 1rem;
+
+    h1 {
+      text-align: right;
+      width: 100%;
+      padding-right: 1rem;
+      height: unset;
+      font-size: 3rem;
+      margin: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      color: black;
+
+      &::selection {
+        background: none;
+      }
+    }
+
+    p {
+      text-align: right;
+      width: 100%;
+      padding-right: 1rem;
+      height: unset;
+      font-size: 0.75rem;
+      margin: 1rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      transition: 0.2s all;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: url('../images/arrow-right.png'), auto;
+      }
+
+      &::selection {
+        background: none;
+      }
+    }
+  }
+}
+
+#card-div-4 {
+  height: unset;
+  width: 70%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  #card-4-1 {
+    background-color: yellow;
+    border-left: 2px black dashed;
+    transform: rotate3d(-1, 7, -5, 80deg);
+    
+    &:hover {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+
+  #card-4-2 {
+    background-color: green;
+    border-bottom: 2px black dashed;
+    transform: rotate3d(5, -6, 2, 50deg);
+    
+    &:hover {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+
+  #card-4-3 {
+    background-color: blue;
+    border-left: 2px black dashed;
+    transform: rotate3d(12, 1, -7, 80deg);
+    
+    h1 {
+      color: white;
+    }
+    
+    &:hover {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+
+  #card-4-4 {
+    background-color: red;
+    border-top: 2px black dashed;
+    transform: rotate3d(10, -7, 2, 65deg);
+
+    h1 {
+      color: white;
+    }
+    
+    &:hover {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+  
+  div {
+    cursor: url('../images/sphere.png'), auto;
+    margin: 0.25rem;
+    height: 10rem;
+    transition: 0.2s all ease-in;
+
+    h1 {
+      background: none;
+      font-size: 1rem;
     }
   }
 }
