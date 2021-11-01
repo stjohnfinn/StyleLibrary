@@ -710,26 +710,17 @@ hr {
   margin-bottom: 5rem;
   width: 500px;
   height: 309px;
-  border: 1px solid black;
   padding: 0;
-  display: grid;
-  grid-template-columns: 0.61fr 0.39fr;
-  grid-template-rows: 1fr;
-
-  &:hover {
-    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.205);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid purple;
   
   div {
-    border: 1px solid black;
     margin: 0;
     padding: 0;
-    justify-self: stretch;
-    align-self: stretch;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    border: 1px solid black;
+    transition: 0.2s all;
     
     
 
