@@ -328,6 +328,9 @@ hr {
   background: none;
   transition: 0.2s all;
 }
+#btn-div-6 div button:active {
+  transform: scale(90%);
+}
 
 #btn-div-7 > div {
   height: 100px;
@@ -608,8 +611,9 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid purple;
-  overflow: hidden;
+}
+#card-div-5 > div {
+  transform: translate(0, 0) rotate(0deg);
 }
 #card-div-5 div {
   margin: 0;
@@ -619,6 +623,12 @@ hr {
   overflow: hidden;
   height: 90%;
   width: 90%;
+  transition: 0.3s all ease-in-out;
+  height: 90%;
+  width: 90%;
+  transform: translate(5px, 5px) rotate(10deg);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
   transform: rotate(10deg);
   box-shadow: inset 4px 4px 2px rgba(0, 0, 0, 0.356);
 }

@@ -386,6 +386,10 @@ hr {
       border-radius: 5px;
       background: none;
       transition: 0.2s all;
+
+      &:active {
+        transform: scale(90%);
+      }
     }
   }
 }
@@ -714,8 +718,11 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid purple;
-  overflow: hidden;
+  // border: 3px solid purple;
+
+  > div {
+    transform: translate(0, 0) rotate(0deg);
+  }
   
   div {
     margin: 0;
@@ -726,8 +733,13 @@ hr {
     height: 90%;
     width: 90%;
     
+    transition: 0.3s all ease-in-out;
+    height: 90%;
+    width: 90%;
+    transform: translate(5px, 5px) rotate(10deg);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
 
-    
     // 1.618
 
     transform: rotate(10deg);
