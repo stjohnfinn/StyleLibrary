@@ -6,6 +6,27 @@ button {
   cursor: pointer;
 }
 
+html {
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  /* Chrome, Edge, and Safari */
+}
+html * {
+  scrollbar-width: auto;
+  scrollbar-color: #2e2e2e #dddddd;
+}
+html *::-webkit-scrollbar {
+  width: 10px;
+}
+html *::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+html *::-webkit-scrollbar-thumb {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  border: 2px solid #dddddd;
+}
+
 body {
   margin: 0;
   background-color: #dddddd;
@@ -756,6 +777,381 @@ hr {
 }
 #btn-div-9 .menu-invisible {
   display: none;
+}
+
+#planets {
+  height: 40rem;
+  width: 100%;
+  position: relative;
+  transform: rotate3d(1, -1, 1, 60deg);
+}
+#planets div {
+  position: absolute;
+}
+#planets div::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+#planets #sun {
+  box-shadow: 0px 0px 6px #e6d221;
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  background-color: #f3c01a;
+}
+#planets #sun::after {
+  display: none;
+}
+#planets #mercury {
+  height: 120px;
+  width: 120px;
+  animation: orbit 2s infinite linear;
+}
+#planets #mercury::after {
+  background-color: grey;
+  border-color: darkgray;
+}
+#planets #venus {
+  height: 180px;
+  width: 180px;
+  animation: orbit 3s infinite linear;
+}
+#planets #venus::after {
+  background-color: greenyellow;
+}
+#planets #earth {
+  height: 250px;
+  width: 250px;
+  animation: orbit 5s infinite linear;
+}
+#planets #earth::after {
+  background-color: blue;
+  height: 7px;
+  width: 7px;
+}
+#planets #mars {
+  height: 300px;
+  width: 300px;
+  animation: orbit 7s infinite linear;
+}
+#planets #mars::after {
+  background-color: #af3625;
+  height: 6px;
+  width: 6px;
+}
+#planets #jupiter {
+  height: 380px;
+  width: 380px;
+  animation: orbit 4s infinite linear;
+}
+#planets #jupiter::after {
+  background-color: orangered;
+  height: 18px;
+  width: 18px;
+}
+#planets #saturn {
+  height: 440px;
+  width: 440px;
+  animation: orbit 12s infinite linear;
+}
+#planets #saturn::after {
+  background-color: sandybrown;
+  height: 15px;
+  width: 15px;
+}
+#planets #uranus {
+  height: 500px;
+  width: 500px;
+  animation: orbit 10s infinite linear;
+}
+#planets #uranus::after {
+  background-color: #58587c;
+  height: 12px;
+  width: 12px;
+}
+#planets #neptune {
+  height: 560px;
+  width: 560px;
+  animation: orbit 8s infinite linear;
+}
+#planets #neptune::after {
+  background-color: #1b1b79;
+  height: 10px;
+  width: 10px;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#btn-div-10 a {
+  font-size: 2rem;
+  font-family: "Inter";
+  color: black;
+  position: relative;
+  cursor: pointer;
+}
+#btn-div-10 a::after, #btn-div-10 a::before {
+  border: 1px solid black;
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -15px;
+  right: -15px;
+  bottom: -5px;
+  transition: 0.2s all;
+}
+#btn-div-10 a:hover::after {
+  transform: rotate(3deg);
+  border: 1px solid #ea00ff;
+}
+#btn-div-10 a:hover::before {
+  transform: rotate(-3deg);
+  border: 1px solid #ea00ff;
+}
+
+#rotating-circles {
+  height: 20rem;
+  position: relative;
+  width: 20rem;
+  border: 1px solid gray;
+  margin: 4rem 0;
+}
+#rotating-circles div {
+  position: absolute;
+  transform-origin: center;
+}
+#rotating-circles div:nth-child(1) {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot1 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(2) {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot2 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(3) {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot3 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(4) {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot4 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(5) {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot5 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(6) {
+  height: 70px;
+  width: 70px;
+  border-radius: 70px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot6 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(7) {
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot7 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(8) {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot8 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(9) {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot9 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(10) {
+  height: 110px;
+  width: 110px;
+  border-radius: 110px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot10 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(11) {
+  height: 120px;
+  width: 120px;
+  border-radius: 120px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot11 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(12) {
+  height: 130px;
+  width: 130px;
+  border-radius: 130px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot12 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(13) {
+  height: 140px;
+  width: 140px;
+  border-radius: 140px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot13 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(14) {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot14 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(15) {
+  height: 160px;
+  width: 160px;
+  border-radius: 160px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot15 8s infinite ease-in-out;
+}
+#rotating-circles div:nth-child(16) {
+  height: 170px;
+  width: 170px;
+  border-radius: 170px;
+  border: 3px transparent solid;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation: circRot16 8s infinite ease-in-out;
+}
+
+@keyframes circRot1 {
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes circRot2 {
+  to {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes circRot3 {
+  to {
+    transform: rotate(1440deg);
+  }
+}
+@keyframes circRot4 {
+  to {
+    transform: rotate(1800deg);
+  }
+}
+@keyframes circRot5 {
+  to {
+    transform: rotate(2160deg);
+  }
+}
+@keyframes circRot6 {
+  to {
+    transform: rotate(2520deg);
+  }
+}
+@keyframes circRot7 {
+  to {
+    transform: rotate(2880deg);
+  }
+}
+@keyframes circRot8 {
+  to {
+    transform: rotate(3240deg);
+  }
+}
+@keyframes circRot9 {
+  to {
+    transform: rotate(3600deg);
+  }
+}
+@keyframes circRot10 {
+  to {
+    transform: rotate(3960deg);
+  }
+}
+@keyframes circRot11 {
+  to {
+    transform: rotate(4320deg);
+  }
+}
+@keyframes circRot12 {
+  to {
+    transform: rotate(4680deg);
+  }
+}
+@keyframes circRot13 {
+  to {
+    transform: rotate(5040deg);
+  }
+}
+@keyframes circRot14 {
+  to {
+    transform: rotate(5400deg);
+  }
+}
+@keyframes circRot15 {
+  to {
+    transform: rotate(5760deg);
+  }
+}
+@keyframes circRot16 {
+  to {
+    transform: rotate(6120deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
